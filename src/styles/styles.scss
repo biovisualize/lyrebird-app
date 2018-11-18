@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700|IBM+Plex+Serif');
+
+$action-color: #2666a6;
+$dim-color: #aaa;
+
+#app {
+  font-family: 'IBM Plex Serif', serif;
+
+  a, a:visited {
+    color: $action-color;
+  }
+
+  button {
+    background: white;
+    border: 1px solid $action-color;
+    color: $action-color;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+      background: $action-color;
+    }
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .header {
+      height: 48px;
+      border-bottom: 1px solid black;
+      line-height: 48px;
+
+      .title {
+        font-family: 'IBM Plex Sans', sans-serif;
+        float: left;
+      }
+
+      .login {
+        float: right;
+      }
+    }
+
+    .message {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 100px;
+      padding: 32px;
+      border: 1px solid $dim-color;
+      box-shadow: 2px 2px 8px #333;
+      border-radius: 4px;
+    }
+
+    .audio-list {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+
+      .audio-bar {
+        display: flex;
+        border: 1px solid #aaa;
+        padding: 8px;
+        margin-bottom: 8px;
+        
+        button {
+          flex: 1;
+          max-width: 64px;
+        }
+
+        .audio-text {
+          margin-left: 32px;
+          flex: 1;
+        }
+
+        .audio-timestamp {
+          float: right;
+          color: $dim-color;
+        }
+      }
+    }
+
+    .generator {
+      display: flex;
+      margin-top: 32px;
+
+      input {
+        line-height: 24px;
+        font-size: 24px;
+        outline: none;
+        border: 1px solid $dim-color;
+        padding: 4px 8px;
+        display: flex;
+        flex: 1;
+        margin-right: 16px;
+      }
+
+     .generate {
+        font-size: 16px;
+        margin-top: 8px;
+        display: flex;
+        max-width: 80px;
+        height: 48px;
+        margin: 0;
+      }
+    }
+
+    canvas {
+      margin-top: 32px;
+      border: 1px solid $dim-color;
+      background-image: url("../assets/canvas.jpg");
+      background-repeat: no-repeat;
+      background-size: 1000px 200px;
+      width: 1000px;
+      height: 200px
+    }
+  }
+}
