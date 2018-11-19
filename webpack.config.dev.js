@@ -23,9 +23,7 @@ export default {
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.CLIENT_ID': JSON.stringify(process.env.CLIENT_ID)
-    }),
+    new webpack.EnvironmentPlugin(['CLIENT_ID']),
     new HardSourceWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
